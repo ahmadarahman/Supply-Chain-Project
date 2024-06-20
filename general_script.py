@@ -33,14 +33,32 @@ def fetch_article_content(url):
 
 # Function to classify relationships between companies using OpenAI's Chat Completions API
 def classify_relationships(article_content):
-    prompt = f"Can you process the following article?\n\n{article_content}\n\nWhat are the companies mentioned in the article? " \
-             "For every company pair, assign their relationship to one of the following types:\n\n" \
-             "1. Acquisition\n" \
-             "2. Strategic collaboration\n" \
-             "3. Competitor relationship\n" \
-             "4. Supplier and subsidiary relationship\n" \
-             "5. Customer client relationship\n" \
-             "6. Regulatory and government body relationship\n\n"
+    prompt = f"""
+    Can you process the following article?
+
+    {article_content}
+
+    What are the companies mentioned in the article? For every company pair, assign their relationship to one of the following types:
+    1. Acquisition
+    2. Strategic collaboration
+    3. Competitor relationship
+    4. Supplier and subsidiary relationship
+    5. Customer client relationship
+    6. Regulatory and government body relationship
+    7. Supply Chain Relationships
+    8. Collaborative Relationship
+    9. Cooperative Relationship
+    10. Coordination Relationship
+    11. Adversarial Relationship
+    12. Transactional Relationship
+    13. Competitive Relationship
+    14. Coopetitive Relationship
+    15. Buyer-Supplier Relationship
+    16. Strategic Alliance
+    17. Vertical Integration
+    18. Joint Venture
+
+    Return the results in a CSV format with the two companies in the first two columns and the relationship type in the third column."""
 
     # Call OpenAI's Chat Completions API to generate the relationships
     response = openai.ChatCompletion.create(
