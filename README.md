@@ -1,4 +1,4 @@
-Automating Supply Chain graphs with GPT/Other AI models
+Automating Supply Chain graphs with GPT/Llama 2. End goal is that user can automate
 
 ## Description
 
@@ -8,8 +8,7 @@ We look to automate the supply chain graphing process using generative AI.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Users will be required to have access Llama 2.7 either locally or have API access. This can be easily accessed through [HuggingFace](https://huggingface.co/)
 
 ### Installing
 
@@ -18,8 +17,8 @@ We look to automate the supply chain graphing process using generative AI.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Run either script based on your preference for the LLM and address the prompt.
+
 ```
 code blocks for commands
 ```
@@ -32,25 +31,24 @@ command to run if program contains helper info
 ```
 ## Resources
 
-https://www.mdpi.com/2071-1050/13/21/11935 is referenced for the following list of relationships
-1. Acquisition
-2. Strategic collaboration
-3. Competitor relationship
-4. Supplier and subsidiary relationship
-5. Customer client relationship
-6. Regulatory and government body relationship
-7. Supply Chain Relationships
-8. Collaborative Relationship
-9. Cooperative Relationship
-10. Coordination Relationship
-11. Adversarial Relationship
-12. Transactional Relationship
-13. Competitive Relationship
-14. Coopetitive Relationship
-15. Buyer-Supplier Relationship
-16. Strategic Alliance
-17. Vertical Integration
-18. Joint Venture
+[Systematic Literature Review of Supply Chain Relationship Approaches amongst Business-to-Business Partners](https://www.mdpi.com/2071-1050/13/21/11935) is referenced to get a list of categorizations to identify roles in the supply chain.
+
+<details>
+
+<summary>The categorizations are as follows </summary>
+
+<ol>
+    <li>Collaboration - collaborative relationships mostly affect the fulfilment and consumption phases of the procurement cycle</li>
+    <li>Cooperative - A cooperative relationship evolves through repeated transactions into a long-term partnership based on trust and loyalty </li>
+    <li>Coordination - Defines supply chain relationships as the coordination of activities into a seamless process </li>
+    <li>Adversarial - Adversarial relationships include attributes such as short-term contracts, tough negotiation and multiple sourcing. These would affect </li>
+    <li>Transactional - A transactional relationship is characterised by a discrete dyadic exchange between sellers and buyers with few personal relationships. Focused on customer side needs like timeliness </li>
+    <li>Competition - <</li>
+    <li>Coopetitive -  In coopetitive relationships, firms engage in cooperative and competitive activities at the same time</li>
+</ol>
+</details>
+Relationships 1-3 are based on trust. 4-6 are power based relationships (one firm exerts more influence upon the other). These are often the most advantagueous.
+
 
 ## Authors
 

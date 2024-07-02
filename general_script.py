@@ -2,6 +2,8 @@ import openai
 import requests
 import gnews
 
+# Use Llama API instead
+
 # Importing keys
 def get_file_contents(filename):
     """ Given a filename,
@@ -21,6 +23,7 @@ gnewsKey = get_file_contents('keys/gnews_key.txt')
 # Passing in API keys for OpenAI and gnews
 openai.api_key = gptKey
 gnews_api_key = gnewsKey
+
 # Function to fetch article content from a specific URL
 def fetch_article_content(url):
     # Replace this with actual logic to fetch article content from the URL
@@ -35,39 +38,26 @@ def fetch_article_content(url):
 def classify_relationships(article_content):
     prompt = f"""
     Can you process the following article?
-
     {article_content}
 
     What are the companies mentioned in the article? For every company pair, assign their relationship to one of the following types:
-    1. Acquisition
-    2. Strategic collaboration
-    3. Competitor relationship
-    4. Supplier and subsidiary relationship
-    5. Customer client relationship
-    6. Regulatory and government body relationship
-    7. Supply Chain Relationships
-    8. Collaborative Relationship
-    9. Cooperative Relationship
-    10. Coordination Relationship
-    11. Adversarial Relationship
-    12. Transactional Relationship
-    13. Competitive Relationship
-    14. Coopetitive Relationship
-    15. Buyer-Supplier Relationship
-    16. Strategic Alliance
-    17. Vertical Integration
-    18. Joint Venture
-
+    1 Collaboration
+    2 Cooperative
+    3 Coordination
+    4 Adversarial
+    5 Transactional
+    6 Competition
+    7 Coopetitive
     Return the results in a CSV format with the two companies in the first two columns and the relationship type in the third column."""
 
     # Call OpenAI's Chat Completions API to generate the relationships
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-instruct",  # Specify the GPT-4 model you want to use
+        model="gpt-3.5-turbo",  # Specify the GPT-4 model you want to use
         messages=[
             {"role": "system", "content": prompt},
             {"role": "user", "content": ""}
         ],
-        max_tokens=150,  # Adjust the number of tokens as needed
+        max_tokens=5,  # Adjust the number of tokens as needed
         stop=["\n\n"]  # Stop generation at double newline to get structured response
     )
 
