@@ -41,13 +41,13 @@ def classify_relationships(article_content):
     {article_content}
 
     What are the companies mentioned in the article? For every company pair, assign their relationship to one of the following types:
-    1 Collaboration
-    2 Cooperative
-    3 Coordination
-    4 Adversarial
-    5 Transactional
-    6 Competition
-    7 Coopetitive
+    1. Collaboration
+    2. Cooperative
+    3. Coordination
+    4. Adversarial
+    5. Transactional
+    6. Competition
+    7. Coopetitive
     Return the results in a CSV format with the two companies in the first two columns and the relationship type in the third column."""
 
     # Call OpenAI's Chat Completions API to generate the relationships

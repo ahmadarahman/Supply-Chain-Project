@@ -6,6 +6,7 @@ import torch
 import transformers
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, AutoModelForCausalLM
 
+
 # Initialize the GNews client
 # API could be changed so make sure this is a correct import
 gnews_client = GNews(language='en')
