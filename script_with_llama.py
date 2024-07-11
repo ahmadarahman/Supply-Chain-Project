@@ -50,13 +50,12 @@ def get_news_articles(query):
 # Ask Llama regarding the pooled articles
 def analyze_relationships(text):
     """Analyze company relationships using the Llama 2 model from Hugging Face."""
-    prompt = (f"Process the following article: {text}\n\n"
+    prompt = (f"Process all these separate articles and return a single list of categorizations: {text}\n\n"
               "What are the companies mentioned in the article? For every company pair, "
               "assign their relationship to one of the following types: "
               "Collaboration, Cooperative, Coordination, Adversarial, Transactional, Competition, Coopetitive")
     response = llama_pipeline(prompt, max_length=512)
     return response[0]['generated_text']
-
 def main():
     query = input("Enter the search query for news articles: ")
     articles = get_news_articles(query)
